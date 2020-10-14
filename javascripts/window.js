@@ -1684,7 +1684,8 @@ var WindowUtilities = {
     return {pageWidth: pageWidth ,pageHeight: pageHeight , windowWidth: windowWidth, windowHeight: windowHeight};
   },
 
-  disableScreen: function(className, overlayId, overlayOpacity, contentId, parent) {
+  disableScreen: function(className, overlayId, overlayOpacity, contentId, parent) {#+
+    overlayId = overlayId || 'overlay_modal';
     WindowUtilities.initLightbox(overlayId, className, function() {this._disableScreen(className, overlayId, overlayOpacity, contentId)}.bind(this), parent || document.body);
   },
 
